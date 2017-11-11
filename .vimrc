@@ -1,9 +1,16 @@
 execute pathogen#infect()
 
-syntax enable
+"https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript 
+if !exists("g:syntax_on")
+    syntax enable
+endif
+
 set background=light
 colorscheme solarized
 filetype plugin indent on
+
+" https://github.com/scrooloose/nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
@@ -61,3 +68,5 @@ function! WildignoreFromGitignore()
 endfunction
 nnoremap <LEADER>cti :call WildignoreFromGitignore()<cr>
 nnoremap <LEADER>cwi :set wildignore=''<cr>:echo 'Wildignore cleared'<cr>
+
+autocmd FileType make setlocal noexpandtab
