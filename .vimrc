@@ -71,3 +71,6 @@ nnoremap <LEADER>cwi :set wildignore=''<cr>:echo 'Wildignore cleared'<cr>
 
 autocmd FileType make setlocal noexpandtab
 :inoremap <S-Tab> <C-V><Tab>
+
+" show the current file name at the top of the terminal window
+set title
