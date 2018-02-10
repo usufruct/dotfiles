@@ -70,3 +70,4 @@ nnoremap <LEADER>cti :call WildignoreFromGitignore()<cr>
 nnoremap <LEADER>cwi :set wildignore=''<cr>:echo 'Wildignore cleared'<cr>
 
 autocmd FileType make setlocal noexpandtab
+:inoremap <S-Tab> <C-V><Tab>
