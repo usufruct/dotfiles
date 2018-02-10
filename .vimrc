@@ -1,6 +1,16 @@
 execute pathogen#infect()
 
-"https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript 
+" Plugins (ls -1 ~/.vim/bundle)
+" command-t
+" editorconfig-vim
+" nerdtree
+" vim-colors-solarized
+" vim-erlang-runtime
+" vim-fugitive
+" vim-ruby
+" vim-sensible
+ 
+" https://stackoverflow.com/questions/33380451/is-there-a-difference-between-syntax-on-and-syntax-enable-in-vimscript 
 if !exists("g:syntax_on")
     syntax enable
 endif
